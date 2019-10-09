@@ -20,14 +20,23 @@ public class Shortcuts {
 		Ctrl+H	Search Workspace (Java Search, Task Search, and File Search)
 		Ctrl+J/Ctrl+Shift+J	Incremental search forward / backwards. Type search term after pressing ctrl+j, there is now search window
 		Ctrl+Shift+O	Open a resource search dialog to find any class
-		 Indentions and Comments
+		
+	Indentions and Comments
 		Tab/Shift+Tab	Increase / decrease indent of selected text
 		Ctrl+I	Correct indention of selected text or of current line
 		Ctrl+Shift+F	Autoformat all code in Editor using code formatter
 		Ctrl+/	Comment / uncomment line or selection ( adds '//' )
 		Ctrl+Shift+\	Remove Block Comment
-		
-		*/
+
+	Run and Debug
+		Ctrl+F11	Save and launch application (run)
+		F11	Debug
+		F5	Step Into function
+		F6	Next step (line by line)
+		F7	Step out
+		F8	Skip to next Breakpoint
+
+		 */
 	}
 
 }
