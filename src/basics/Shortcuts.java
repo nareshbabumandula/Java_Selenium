@@ -10,6 +10,7 @@ public class Shortcuts {
 		// To comment a line of code used - //
 		int a=100;
 		int c=300;
+		int b=200;
 		// Run the java code
 		//1. Click on the Run button in the toolbar
 		//2. Ctrl + F11
