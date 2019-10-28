@@ -7,7 +7,7 @@ public class EncapsulationTest {
 	
 	
 	public String getUSERNAME() {
-		return USERNAME;
+		return USERNAME ;
 	}
 
 
