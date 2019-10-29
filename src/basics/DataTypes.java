@@ -4,7 +4,6 @@ public class DataTypes {
 
 	public static void main(String[] args) {
 
-
 		// Primitive data types
 		byte b=100; 
 		short s=124;
