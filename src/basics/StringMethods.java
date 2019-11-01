@@ -31,6 +31,9 @@ public class StringMethods
 		System.out.println(asText[1]);
 		System.out.println(asText[2]);
 		System.out.println(sText3.join("!", asText));
+		String strText = "welcome to core java training";
+		
+		System.out.println(strText.indexOf("java"));
 		
 		
 	}
