@@ -39,6 +39,7 @@ public class ClassA {
 		obj.division();
 		obj.modulus();
 		obj.multiplication();
+	
 	}
 
 }
