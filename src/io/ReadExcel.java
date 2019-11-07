@@ -49,7 +49,6 @@ public class ReadExcel {
 		fis.close();
 	}
 
-
 	public static void main(String[] args) throws IOException {
 
 		ReadExcel read = new ReadExcel();
