@@ -35,6 +35,8 @@ public class ListboxTest {
 		Thread.sleep(3000);
 		list.selectByIndex(1);
 		Thread.sleep(3000);
+		System.out.println("Multiple items selection status is : " + list.isMultiple());
+		System.out.println(list.getAllSelectedOptions());
 		
 		List<WebElement> lstCountries = driver.findElements(By.tagName("option"));
 		System.out.println("No of countries found in the Counrty dropdown are : " + lstCountries.size());
