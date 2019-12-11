@@ -4,8 +4,10 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -48,13 +50,16 @@ public class TC01 extends RegistrationPage{
 			driver.findElement(PASSWORD).sendKeys("Secure*1234");
 			driver.findElement(CNFPASSWORD).sendKeys("Secure*1234");
 			driver.findElement(SUBMIT).click();
-			driver.findElement(lp.SIGNOFF).click();
-			driver.findElement(lp.HOME).click();
-			driver.findElement(lp.USERID).sendKeys("naresh223");
-			driver.findElement(lp.PWD).sendKeys("Secure*1234");
-			driver.findElement(lp.SIGNIN).click();
 			
-			if (driver.findElement(lp.SIGNOFF).isDisplayed()) {
+			LoginPage lp = PageFactory.initElements(driver, LoginPage.class);
+			
+			lp.SIGNOFF.click();
+			lp.HOME.click();
+			lp.USERID.sendKeys("naresh223");
+			lp.PWD.sendKeys("Secure*1234");
+			lp.SIGNIN.click();
+			
+			if (lp.SIGNOFF.isDisplayed()) {
 				bFlag = true;
 			} else {
 				bFlag = false;
