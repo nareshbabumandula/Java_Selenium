@@ -10,6 +10,8 @@ public class LoginPage {
 	
 	// Page Factory
 	
+	 @FindBy(id = "foobar") WebElement foobar;
+	
 	// Syntax - 1
 	@FindBy(linkText="SIGN-OFF")
 	public WebElement SIGNOFF;
