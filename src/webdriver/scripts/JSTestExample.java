@@ -11,39 +11,30 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 
-public class TextboxTest {
-	
+public class JSTestExample {
+
 	public WebDriver driver;
 	String strProjectPath = System.getProperty("user.dir");
-	
+
 	@Test
-	public void TextboxMethods() throws InterruptedException 
+	public void RadioButtonJSMethods() throws InterruptedException 
 	{
-		WebElement USERNAME = driver.findElement(By.name("userName"));
+		WebElement rbtnRoundTrip = driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1"));
 		
-		System.out.println(USERNAME.getAttribute("type"));
-		System.out.println(USERNAME.getAttribute("name"));
-		System.out.println(USERNAME.getAttribute("size"));
-		System.out.println(USERNAME.getTagName());
-		Reporter.log("Successfully retrieved all the available attributes value");
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].style.border='2px groove green'", USERNAME);  // Highlight the object with groove green
-		Thread.sleep(5000);
-		
-		// Enter data in a textbox using WebDriver
-		USERNAME.sendKeys("Shilpa@123");
+		JavascriptExecutor js =  (JavascriptExecutor)driver;
+		// Click on a RoundTrip radio button using JavaScriptExecutor
+		js.executeScript("arguments[0].click();", rbtnRoundTrip);
 		Thread.sleep(2000);
-		USERNAME.clear();
+		js.executeScript("document.getElementById('ctl00_mainContent_chk_IndArm').checked=true;");
 		Thread.sleep(2000);
-		USERNAME.sendKeys("Aruna");
 	}
-	
+
 	@BeforeClass
 	public void LaunchBrowser() 
 	{
 		System.setProperty("webdriver.chrome.driver", strProjectPath + "\\browsers\\chromedriver.exe" );
 		driver = new ChromeDriver();
-		driver.get("http://www.newtours.demoaut.com");
+		driver.get("https://www.spicejet.com/");
 		driver.manage().window().maximize();
 	}
 
