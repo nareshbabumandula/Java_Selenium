@@ -41,7 +41,7 @@ public class MethodsTest
 	
 	public static void main(String[] args) 
 	{
-		// Classname objname = new Constructor(); 
+		// Classname refname = new Constructor(); 
 		MethodsTest mt = new MethodsTest();
 		mt.Addition();
 		mt.Subtraction(30, 10);
